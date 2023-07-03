@@ -1,0 +1,21 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "name": "myblob",
+      "type": "blobTrigger",
+      "direction": "in",
+      "path": "input/encrypted/{name}",
+      "source": "EventGrid",
+      "connection": "sctesthashdecrypt_STORAGE"
+    },
+    {
+      "name": "outputblob",
+      "type": "blob",
+      "dataType": "binary",
+      "path": "input/decrypted/{name}.txt",
+      "connection": "sctesthashdecrypt_STORAGE",
+      "direction": "out"
+    }
+  ]
+}
